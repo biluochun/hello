@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Hello
+js: index
 ---
 <center>
   <h1>IMconfig</h1>
@@ -8,7 +9,7 @@ title: Hello
   <p>最近更新:<time>{{ site.time }}</time></p>
 </center>
 <section>
-  <ul>
+  <ul class="clearfix">
   {% for post in site.posts %}
     <li><a href="{{ post.url }}">{{ post.title }}</a></li>
   {% endfor %}

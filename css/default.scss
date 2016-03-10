@@ -3,4 +3,26 @@ main{
   p{
     color: $color-main;
   }
+  section{
+    position: relative;
+    ul{
+      li{
+        $section-ul-li-width: 100px;
+        width: $section-ul-li-width;
+        height: $section-ul-li-width * 1.5;
+        padding: 4px;
+        margin: 4px;
+        background-color: $color-main;
+        border: 4px solid #FFF;
+        box-shadow: 0 0 4px $color-main;
+        a{
+          color:#fff;
+          &:hover{
+            color:#83E9F5;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
 }
