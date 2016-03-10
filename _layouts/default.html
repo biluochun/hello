@@ -3,13 +3,15 @@
 <head>
   <meta http-equiv="content-type" content="text/html;charset=utf-8">
   <title>{{ page.title }}</title>
+  <base href="{{ site.src_url }}" />
+  <link rel="stylesheet" type="text/css" href="/css/default.css">
 </head>
 <body>
-  <h1>{{ page.title }}</h1>
-  <p>作者:<auther>{{ page.auther }}</auther></p>
-  <p>最近更新:<time>{{ site.time }}</time></p>
-  <div id="main">
-    {{ content }}
-  </div>
+{% include header.html %}
+<!-- 主体 -->
+<main>
+  {{ content }}
+</main>
+{% include footer.html %}
 </body>
 </html>
