@@ -50,16 +50,26 @@ body{
         display: block;
         height: $header-div-width / 4 - 50px;
         margin-top: 20px;
-        opacity: 0;
-        transition: all 2s ease-in-out;
+        font-size: 12px;
+        height: 32px;
+        span{
+          transition: opacity 2s ease-in-out;
+          opacity: 0;
+          text-shadow: 0 0 10px #FFF;
+          display: block;
+          &.delay{
+            transition-delay: 1s;
+          }
+        }
       }
       &:hover{
         opacity: .9;
         transform: rotate(0);
         border-radius: 30px;
         p{
-          opacity: 1;
-          text-shadow: 0 0 10px #FFF;
+          span{
+            opacity: 1;
+          }
         }
       }
     }
@@ -151,6 +161,7 @@ body{
     margin: 50px;
   }
   &>footer{
+    color: #fff;
     transition: all .4s ease-in-out;
     position: fixed;
     z-index: $zIndex-footer;

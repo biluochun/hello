@@ -43,15 +43,21 @@ body {
         display: block;
         height: 25px;
         margin-top: 20px;
-        opacity: 0;
-        transition: all 2s ease-in-out; }
+        font-size: 12px;
+        height: 32px; }
+        body > header > div p span {
+          transition: opacity 2s ease-in-out;
+          opacity: 0;
+          text-shadow: 0 0 10px #FFF;
+          display: block; }
+          body > header > div p span.delay {
+            transition-delay: 1s; }
       body > header > div:hover {
         opacity: .9;
         transform: rotate(0);
         border-radius: 30px; }
-        body > header > div:hover p {
-          opacity: 1;
-          text-shadow: 0 0 10px #FFF; }
+        body > header > div:hover p span {
+          opacity: 1; }
     body > header .menu {
       padding-top: 150px;
       top: -160px;
@@ -114,6 +120,7 @@ body {
   body > main {
     margin: 50px; }
   body > footer {
+    color: #fff;
     transition: all .4s ease-in-out;
     position: fixed;
     z-index: 90;
