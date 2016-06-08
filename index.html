@@ -89,42 +89,9 @@
 </footer>
 <script src="http://cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
 <script type="text/javascript">
-  require.config({
-    "res": {
-        "css/default.scss": {
-            "uri": "/css/default_2e1df13.css",
-            "type": "css"
-        },
-        "css/main.scss": {
-            "uri": "/css/main_9b1e340.css",
-            "type": "css"
-        },
-        "js/base.js": {
-            "uri": "/js/base_dbbda90.js",
-            "type": "js",
-            "extras": {
-                "async": [
-                    "http://cdn.bootcss.com/vue/1.0.24/vue.min.js",
-                    "http://cdn.bootcss.com/vue-router/0.7.13/vue-router.min.js",
-                    "js/data/music.hetu.js"
-                ]
-            }
-        },
-        "js/data/music.hetu.js": {
-            "uri": "/js/data/music.hetu_911810f.js",
-            "type": "js",
-            "extras": {
-                "moduleId": "js/data/music.hetu"
-            }
-        },
-        "js/index.js": {
-            "uri": "/js/index_d41d8cd.js",
-            "type": "js"
-        }
-    },
-    "pkg": {}
-});
+  require(['js/base'], function(base){
+    console.log(base);
+  });
 </script>
-<script type="text/javascript" src="/js/base_dbbda90.js"></script>
 </body>
 </html>
