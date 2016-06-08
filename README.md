@@ -1,2 +1,2 @@
 # hello
-site: [link http://hello.imconfig.com](http://hello.imconfig.com)
+网址: [http://hello.imconfig.com](http://hello.imconfig.com)
