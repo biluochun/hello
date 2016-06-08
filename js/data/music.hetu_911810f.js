@@ -1,4 +1,4 @@
-define(function() {
+define('js/data/music.hetu', ['require'], function(require) {
     var hetu = {
         name: '河图',
         weibo: 'http://weibo.com/u/1750157883'
