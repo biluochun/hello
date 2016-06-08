@@ -11,6 +11,13 @@ title: Hello
   <link rel="stylesheet" type="text/css" href="./css/default.css">
 </head>
 <body>
+<!-- page loader model -->
+<div id="page-loader-model" :class="{hide: loaded}">
+	<div class="spinner">
+		<div class="cube1"></div>
+		<div class="cube2"></div>
+	</div>
+</div>
 <!-- 头部 -->
 <header>
   <!-- 网站菜单 -->
