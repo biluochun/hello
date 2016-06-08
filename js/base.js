@@ -1,7 +1,5 @@
-require.config({
-  baseUrl: '/'
-});
-require(['./data/music.hetu', 'http://cdn.bootcss.com/vue/1.0.24/vue.min.js'], function(hetu, Vue) {
+
+require(['/js/data/music.hetu', 'http://cdn.bootcss.com/vue/1.0.24/vue.min.js'], function(hetu, Vue) {
   var rand = Math.floor(Math.random() * hetu.lyrics.length);
   var vm = new Vue({
     el: 'body',
