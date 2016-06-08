@@ -1,0 +1,41 @@
+---
+title: Hello
+---
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <title>{{ title }}</title>
+  <base href="{{ site.src_url }}" />
+  <link rel="stylesheet" type="text/css" href="./css/default.scss">
+</head>
+<body>
+<link rel="import" href="./_html_tpl/header.html?__inline">
+<!-- 主体 -->
+<main>
+  <center>
+    <h1>IMconfig</h1>
+    <p>作者:<auther>{{ site.auther }}</auther></p>
+    <p>最近更新:<time>{{ site.time }}</time></p>
+  </center>
+  <section>
+    <ul class="clearfix">
+    {% for post in site.posts %}
+    <li>
+      <div class="content">
+        <a href="{{ post.url }}">
+          <h2>《{{ post.title }}》</h2>
+        </a>
+        {{ post.excerpt }}
+      </div>
+    </li>
+    {% endfor %}
+    </ul>
+  </section>
+</main>
+<link rel="import" href="./_html_tpl/footer.html?__inline">
+<script src="http://cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+<script type="text/javascript" src="./js/base.js"></script>
+</body>
+</html>
