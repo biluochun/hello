@@ -1,4 +1,4 @@
-defien(function() {
+define(function() {
     var hetu = {
         name: '河图',
         weibo: 'http://weibo.com/u/1750157883'
