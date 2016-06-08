@@ -5,7 +5,7 @@ require([
 ], function(
   Vue,
   VueRouter,
-  hetu,
+  hetu
 ) {
   Vue.config.delimiters = ['{=', '=}'];
   var rand = Math.floor(Math.random() * hetu.lyrics.length);
