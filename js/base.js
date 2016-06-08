@@ -14,11 +14,16 @@ require([
     var vm = new Vue({
         el: 'body',
         data: {
-            loaded: false,
+            loadStatus: 0,
             lyrics: hetu.lyrics[rand]
         },
         ready: function(){
-            this.loaded = true;
+            this.loadStatus = 1;
+            setTimeout(closeLoader.bind(this), 1);
         }
     });
+
+    function closeLoader(){
+        this.loadStatus = 2;
+    }
 });
