@@ -17,13 +17,16 @@ require([
             loadStatus: 0,
             lyrics: hetu.lyrics[rand]
         },
-        ready: function(){
-            this.loadStatus = 1;
+        ready: function() {
             setTimeout(closeLoader.bind(this), 1);
         }
     });
 
-    function closeLoader(){
-        this.loadStatus = 2;
+    function closeLoader() {
+        var that = this;
+        that.loadStatus++;
+        setTimeout(function() {
+            that.loadStatus++;
+        }, 1000);
     }
 });
