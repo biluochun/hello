@@ -12,21 +12,20 @@ require([
     Vue.config.delimiters = ['{=', '=}'];
     var rand = Math.floor(Math.random() * hetu.lyrics.length);
     var vm = new Vue({
-        el: 'body',
+        el: '#body',
         data: {
-            loadStatus: 0,
             lyrics: hetu.lyrics[rand]
         },
         ready: function() {
-            setTimeout(closeLoader.bind(this), 1);
+            setTimeout(closeLoader, 1);
         }
     });
 
     function closeLoader() {
-        var that = this;
-        that.loadStatus++;
+        var loader = document.getElementById('page-loader-model');
+        loader.className = 'hide';
         setTimeout(function() {
-            that.loadStatus++;
+            loader.remove();
         }, 1000);
     }
 });
