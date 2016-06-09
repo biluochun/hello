@@ -1,0 +1,1 @@
+fis3 server start --root ./
