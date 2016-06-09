@@ -31,16 +31,20 @@ a:hover {
   visibility: hidden;
 }
 
-body {
+html, body {
+  margin: 0;
+}
+
+#body {
   margin: 0;
   background-color: #F8F8F8;
 }
 
-body > header {
+#body > header {
   background-color: #c5c5c5;
 }
 
-body > header > div {
+#body > header > div {
   position: fixed;
   width: 300px;
   height: 150px;
@@ -54,7 +58,7 @@ body > header > div {
   z-index: 100;
 }
 
-body > header > div p {
+#body > header > div p {
   color: #83FFE9;
   display: block;
   height: 25px;
@@ -63,48 +67,48 @@ body > header > div p {
   height: 32px;
 }
 
-body > header > div p span {
+#body > header > div p span {
   transition: opacity 2s ease-in-out;
   opacity: 0;
   text-shadow: 0 0 30px #FFF;
   display: block;
 }
 
-body > header > div p span.delay {
+#body > header > div p span.delay {
   transition-delay: 1s;
 }
 
-body > header > div:hover {
+#body > header > div:hover {
   opacity: .9;
   transform: rotate(0);
   border-radius: 30px;
 }
 
-body > header > div:hover p span {
+#body > header > div:hover p span {
   opacity: 1;
 }
 
-body > header .menu {
+#body > header .menu {
   padding-top: 150px;
   top: -160px;
   left: -160px;
   transform: rotate(-45deg);
 }
 
-body > header .menu:hover {
+#body > header .menu:hover {
   left: 0;
 }
 
-body > header .menu ul {
+#body > header .menu ul {
   font-size: 16px;
   padding: 0 50px;
 }
 
-body > header .menu ul a {
+#body > header .menu ul a {
   color: #FFF;
 }
 
-body > header .menu ul li {
+#body > header .menu ul li {
   transition: all .4s ease-in-out;
   float: left;
   padding: 4px 0;
@@ -112,15 +116,15 @@ body > header .menu ul li {
   width: 60px;
 }
 
-body > header .menu ul li.index {
+#body > header .menu ul li.index {
   margin: 20px 70px;
 }
 
-body > header .menu ul li.three {
+#body > header .menu ul li.three {
   margin: 0 10px;
 }
 
-body > header .menu ul li:hover {
+#body > header .menu ul li:hover {
   transform: rotate(10deg);
   background-color: #F8F8F8;
   color: #04A4CC;
@@ -128,24 +132,24 @@ body > header .menu ul li:hover {
   box-shadow: 0 0 10px #fff;
 }
 
-body > header .auther {
+#body > header .auther {
   padding-top: 150px;
   top: -160px;
   right: -160px;
   transform: rotate(45deg);
 }
 
-body > header .auther:hover {
+#body > header .auther:hover {
   right: 0;
 }
 
-body > header .auther:hover img {
+#body > header .auther:hover img {
   transform: rotate(0);
   margin-top: 20px;
   width: 24%;
 }
 
-body > header .auther img {
+#body > header .auther img {
   transition: all .4s ease-in-out;
   transform: rotate(-45deg);
   width: 30%;
@@ -153,33 +157,33 @@ body > header .auther img {
   box-shadow: 0 0 10px #FFF;
 }
 
-body > header .chat {
+#body > header .chat {
   padding-bottom: 150px;
   right: -210px;
   bottom: -210px;
   transform: rotate(45deg);
 }
 
-body > header .chat:hover {
+#body > header .chat:hover {
   right: 0;
 }
 
-body > header .other {
+#body > header .other {
   padding-bottom: 150px;
   bottom: -210px;
   left: -210px;
   transform: rotate(-45deg);
 }
 
-body > header .other:hover {
+#body > header .other:hover {
   left: 0;
 }
 
-body > main {
+#body > main {
   margin: 50px;
 }
 
-body > footer {
+#body > footer {
   color: #fff;
   transition: all .4s ease-in-out;
   position: fixed;
@@ -195,7 +199,7 @@ body > footer {
   padding-top: 4px;
 }
 
-body > footer:hover {
+#body > footer:hover {
   padding-top: 20px;
   height: 84px;
 }
@@ -237,16 +241,20 @@ a:hover {
   visibility: hidden;
 }
 
-body {
+html, body {
+  margin: 0;
+}
+
+#body {
   margin: 0;
   background-color: #F8F8F8;
 }
 
-body > header {
+#body > header {
   background-color: #c5c5c5;
 }
 
-body > header > div {
+#body > header > div {
   position: fixed;
   width: 300px;
   height: 150px;
@@ -260,7 +268,7 @@ body > header > div {
   z-index: 100;
 }
 
-body > header > div p {
+#body > header > div p {
   color: #83FFE9;
   display: block;
   height: 25px;
@@ -269,48 +277,48 @@ body > header > div p {
   height: 32px;
 }
 
-body > header > div p span {
+#body > header > div p span {
   transition: opacity 2s ease-in-out;
   opacity: 0;
   text-shadow: 0 0 30px #FFF;
   display: block;
 }
 
-body > header > div p span.delay {
+#body > header > div p span.delay {
   transition-delay: 1s;
 }
 
-body > header > div:hover {
+#body > header > div:hover {
   opacity: .9;
   transform: rotate(0);
   border-radius: 30px;
 }
 
-body > header > div:hover p span {
+#body > header > div:hover p span {
   opacity: 1;
 }
 
-body > header .menu {
+#body > header .menu {
   padding-top: 150px;
   top: -160px;
   left: -160px;
   transform: rotate(-45deg);
 }
 
-body > header .menu:hover {
+#body > header .menu:hover {
   left: 0;
 }
 
-body > header .menu ul {
+#body > header .menu ul {
   font-size: 16px;
   padding: 0 50px;
 }
 
-body > header .menu ul a {
+#body > header .menu ul a {
   color: #FFF;
 }
 
-body > header .menu ul li {
+#body > header .menu ul li {
   transition: all .4s ease-in-out;
   float: left;
   padding: 4px 0;
@@ -318,15 +326,15 @@ body > header .menu ul li {
   width: 60px;
 }
 
-body > header .menu ul li.index {
+#body > header .menu ul li.index {
   margin: 20px 70px;
 }
 
-body > header .menu ul li.three {
+#body > header .menu ul li.three {
   margin: 0 10px;
 }
 
-body > header .menu ul li:hover {
+#body > header .menu ul li:hover {
   transform: rotate(10deg);
   background-color: #F8F8F8;
   color: #04A4CC;
@@ -334,24 +342,24 @@ body > header .menu ul li:hover {
   box-shadow: 0 0 10px #fff;
 }
 
-body > header .auther {
+#body > header .auther {
   padding-top: 150px;
   top: -160px;
   right: -160px;
   transform: rotate(45deg);
 }
 
-body > header .auther:hover {
+#body > header .auther:hover {
   right: 0;
 }
 
-body > header .auther:hover img {
+#body > header .auther:hover img {
   transform: rotate(0);
   margin-top: 20px;
   width: 24%;
 }
 
-body > header .auther img {
+#body > header .auther img {
   transition: all .4s ease-in-out;
   transform: rotate(-45deg);
   width: 30%;
@@ -359,33 +367,33 @@ body > header .auther img {
   box-shadow: 0 0 10px #FFF;
 }
 
-body > header .chat {
+#body > header .chat {
   padding-bottom: 150px;
   right: -210px;
   bottom: -210px;
   transform: rotate(45deg);
 }
 
-body > header .chat:hover {
+#body > header .chat:hover {
   right: 0;
 }
 
-body > header .other {
+#body > header .other {
   padding-bottom: 150px;
   bottom: -210px;
   left: -210px;
   transform: rotate(-45deg);
 }
 
-body > header .other:hover {
+#body > header .other:hover {
   left: 0;
 }
 
-body > main {
+#body > main {
   margin: 50px;
 }
 
-body > footer {
+#body > footer {
   color: #fff;
   transition: all .4s ease-in-out;
   position: fixed;
@@ -401,7 +409,7 @@ body > footer {
   padding-top: 4px;
 }
 
-body > footer:hover {
+#body > footer:hover {
   padding-top: 20px;
   height: 84px;
 }
