@@ -1,8 +1,8 @@
 require([
     'http://cdn.bootcss.com/vue/1.0.24/vue.min.js',
     'http://cdn.bootcss.com/vue-router/0.7.13/vue-router.min.js',
-    'js/data/music.hetu',
-    'js/router.map'
+    './data/music.hetu.js',
+    './router.map.js'
 ], function(
     Vue,
     VueRouter,
@@ -12,20 +12,21 @@ require([
     Vue.config.delimiters = ['{=', '=}'];
     var rand = Math.floor(Math.random() * hetu.lyrics.length);
     var vm = new Vue({
-        el: '#body',
+        el: 'body',
         data: {
+            loadStatus: 0,
             lyrics: hetu.lyrics[rand]
         },
         ready: function() {
-            setTimeout(closeLoader, 1);
+            setTimeout(closeLoader.bind(this), 1);
         }
     });
 
     function closeLoader() {
-        var loader = document.getElementById('page-loader-model');
-        loader.className = 'hide';
+        var that = this;
+        that.loadStatus++;
         setTimeout(function() {
-            loader.remove();
+            that.loadStatus++;
         }, 1000);
     }
 });
