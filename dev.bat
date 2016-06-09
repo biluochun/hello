@@ -1,1 +1,0 @@
-fis3 server start --root ../branches/gh-pages/

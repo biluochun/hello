@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <title>{{ page.title }}</title>
+  <base href="{{ site.src_url }}" />
+  <link rel="stylesheet" type="text/css" href="/css/default.css">
+</head>
+<body>
+{% include header.html %}
+<!-- 主体 -->
+<main>
+  {{ content }}
+</main>
+{% include footer.html %}
+<script type="text/javascript" src="http://apps.bdimg.com/libs/vue/1.0.14/vue.js"></script>
+<script type="text/javascript" src="/js/base.js"></script>
+<script type="text/javascript" src="/js/{{ page.js }}.js"></script>
+</body>
+</html>
