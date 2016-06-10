@@ -85,8 +85,10 @@ require([
 
         router.map(routerMap);
         router.start(App, '#body');
-        router.go({
-            name: 'index'
-        });
+        if (router.router._currentRoute.path === '/') {
+            router.go({
+                name: 'index'
+            });
+        }
     }
 });
