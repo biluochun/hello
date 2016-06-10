@@ -414,6 +414,7 @@ h1 {
 }
 
 .main.categories .posts .block.post:hover {
+  border-radius: 0px;
   background-color: #007199;
 }
 
