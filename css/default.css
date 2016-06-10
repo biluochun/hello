@@ -124,6 +124,7 @@ body, html {
   top: -160px;
   left: -160px;
   transform: rotate(-45deg);
+  left: 0;
 }
 
 #body > header .menu:hover {
