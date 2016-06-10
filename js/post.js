@@ -1,6 +1,6 @@
 define('js/post', ['require'], function(require){
 	return {
-		template: '<div id="post" v-html="html"></div>',
+		template: '<div class="main post" transition="normal" id="post" v-html="html"></div>',
 		data: function(){
 			return {
 				html: ''

@@ -195,7 +195,11 @@ body, html {
 }
 
 #body > .main {
-  margin: 50px;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  right: 50px;
+  bottom: 50px;
 }
 
 #body > footer {

@@ -31,7 +31,7 @@ require([
             linkActiveClass: 'active'
         });
         var App = Vue.extend({
-            data: function (){
+            data: function() {
                 return {
                     lyrics: hetu.lyrics[rand]
                 };
@@ -54,6 +54,8 @@ require([
 
         router.map(routerMap);
         router.start(App, '#body');
-        router.go({name: 'index'});
+        router.go({
+            name: 'index'
+        });
     }
 });
