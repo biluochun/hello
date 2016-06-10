@@ -85,7 +85,7 @@ require([
 
         router.map(routerMap);
         router.start(App, '#body');
-        if (router.router._currentRoute.path === '/') {
+        if (router._currentRoute.path === '/') {
             router.go({
                 name: 'index'
             });
