@@ -471,8 +471,12 @@ h1 {
   position: absolute;
   bottom: 0;
   top: 140px;
+  color: #5D5D5D;
+  line-height: 26px;
+  font-size: 16px;
 }
 
 .main.post .content p {
   margin: 8px;
+  text-indent: 2rem;
 }
