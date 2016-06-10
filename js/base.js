@@ -48,6 +48,19 @@ require([
                 }
             },
             '/post': {
+                name: 'post',
+                component: post
+            },
+            '/about': {
+                name: 'about',
+                component: post
+            },
+            '/friend': {
+                name: 'friend',
+                component: post
+            },
+            '/categories': {
+                name: 'categories',
                 component: post
             }
         };
