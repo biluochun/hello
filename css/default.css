@@ -385,12 +385,17 @@ h1 {
   height: 100px;
 }
 
+.main.categories .posts {
+  margin-bottom: 20px;
+}
+
 .main.categories .posts .name {
   float: left;
   border-radius: 4px;
   background-color: #04a4cc;
   color: #FFF;
-  padding: 2px;
+  padding: 2px 8px;
+  font-size: 16px;
 }
 
 .main.categories .posts .post {
@@ -401,10 +406,18 @@ h1 {
   border-radius: 4px;
   box-shadow: 0 0 1px #04a4cc;
   color: #04a4cc;
+  font-size: 14px;
 }
 
 .main.categories .posts .post .date {
   position: absolute;
   margin-top: 20px;
   background-color: #FFF;
+  font-size: 12px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.main.categories .posts .post:hover .date {
+  opacity: 1;
 }
