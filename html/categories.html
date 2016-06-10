@@ -1,9 +1,8 @@
 ---
 ---
 <div class="main categories" transition="normal">
-{{site.categories|jsonify}}
 	{% for posts in site.categories %}
-	{{ posts }}
+	{{ posts|jsonify }}
 		{% for post in posts %}
 			url:{{ post.url }}</br>
 			id:{{ post.id }}
