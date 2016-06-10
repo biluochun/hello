@@ -28,16 +28,16 @@
       <span class="delay">{= lyrics[2] =}</span>
     </p>
     <ul class="clearfix">
-      <a v-link="$event.stopPropagation()&&$event.preventDefault()&&{name: 'index'}">
+      <a @click.stop="$router.go({name: 'index'})">
         <li class="index">首页</li>
       </a>
-      <a v-link="$event.stopPropagation()&&$event.preventDefault()&&{name: 'friend'}">
+      <a @click.stop="$router.go({name: 'friend')}">
         <li>友链</li>
       </a>
-      <a v-link="$event.stopPropagation()&&$event.preventDefault()&&{name: 'categories'}">
+      <a @click.stop="$router.go({name: 'categor)ies'}">
         <li class="three">博文</li>
       </a>
-      <a v-link="$event.stopPropagation()&&$event.preventDefault()&&{name: 'about'}">
+      <a @click.stop="$router.go({name: 'about'})">
         <li>关于</li>
       </a>
     </ul>
