@@ -85,10 +85,24 @@ require([
 
         router.map(routerMap);
         router.start(App, '#body');
-        if (router._currentRoute.path === '/') {
-            router.go({
-                name: 'index'
-            });
+
+        var routerName = router._currentTransition.to.name;
+        var routerNumber = 0;
+        var routerIndex = 0;
+        for(var i in routerMap){
+            routerNumber++;
+        }
+        for(var i in routerMap){
+            if(routerMap[i].name === routerName){
+                break;
+            }else{
+                routerIndex++;
+                if(routerIndex === routerNumber){
+                    router.go({
+                        name: 'index'
+                    });
+                }
+            }
         }
     }
 });
