@@ -2,9 +2,14 @@
 ---
 <div class="main categories" transition="normal">
 	{% for posts in site.categories %}
-	0000000000:{{posts[0]}}
-		{% for post in posts[1] %}
-			{{ post|jsonify }}--------
-		{% endfor %}
+		<div class="posts">
+			<div class="name">{{posts[0]}}</div>
+			{% for post in posts[1] %}
+			<div class="post">
+				<div class="title" v-link="'/post?url={{post.url}}'">post.title</div>
+				<div class="date">{{post.date}}</div>
+			</div>
+			{% endfor %}
+		</div>
 	{% endfor %}
-</div>c
+</div>
