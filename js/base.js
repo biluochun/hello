@@ -39,8 +39,7 @@ require([
         var App = Vue.extend({
             data: function() {
                 return {
-                    lyrics: hetu.lyrics[rand],
-                    loader: 0
+                    lyrics: hetu.lyrics[rand]
                 };
             },
             ready: function() {

@@ -17,7 +17,6 @@ define('js/post', ['require'], function(require){
 			},
 			activate: function(transition){
 				this.html = temp;
-				this.$parent.loader = 10;
 				transition.next();
 			}
 		}
