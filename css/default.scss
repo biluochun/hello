@@ -1,11 +1,17 @@
+@import "./theme.scss";
+
+
 @import "./main.scss";
 @import "./loader.scss";
 
-main{
+.main{
   p{
     color: $color-main;
   }
-  section{
+  .center{
+    text-align: center;
+  }
+  .section{
     position: relative;
     ul{
       li{
@@ -28,7 +34,7 @@ main{
         a{
           color:#fff;
         }
-        des{
+        .des{
           color: #DADADA;
           font-size: 0.8rem;
         }

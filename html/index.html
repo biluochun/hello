@@ -1,0 +1,23 @@
+---
+---
+<div class="main">
+  <div class="center">
+    <h1>IMconfig</h1>
+    <p><b>作者:</b>{{ site.auther }}</p>
+    <p><b>最近更新:</b>{{ site.time }}</p>
+  </div>
+  <div class="section">
+    <ul class="clearfix">
+      {% for post in site.posts %}
+        <li>
+          <div class="content">
+            <a v-link="'/post?url={{ post.url }}'">
+              <h2>《{{ post.title }}》</h2>
+            </a>
+            {{ post.excerpt }}
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
