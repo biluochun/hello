@@ -468,3 +468,7 @@ h1 {
 .main.post .content {
   margin-top: 20px;
 }
+
+.main.post .content p {
+  margin: 8px;
+}
