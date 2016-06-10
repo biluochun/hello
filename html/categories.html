@@ -8,7 +8,7 @@
 			{% for post in posts[1] %}
 			<div class="block post" v-link="'/post?url={{post.url}}'">
 				<div class="date">{{post.date}}</div>
-				{{post.title}}
+				<div class="content">{{post.title}}</div>
 			</div>
 			{% endfor %}
 		</div>

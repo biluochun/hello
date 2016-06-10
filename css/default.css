@@ -408,13 +408,13 @@ h1 {
 }
 
 .main.categories .posts .block.post .date {
-  position: absolute;
-  margin-top: 20px;
-  font-size: 12px;
-  opacity: 0;
-  pointer-events: none;
+  display: none;
 }
 
 .main.categories .posts .block.post:hover .date {
-  opacity: 1;
+  display: block;
+}
+
+.main.categories .posts .block.post:hover .content {
+  display: none;
 }
