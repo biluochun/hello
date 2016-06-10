@@ -28,16 +28,16 @@
       <span class="delay">{= lyrics[2] =}</span>
     </p>
     <ul class="clearfix">
-      <a v-link="{name: 'index'}" @click.prevent.stop="">
+      <a v-link.stop="{name: 'index'}">
         <li class="index">首页</li>
       </a>
-      <a v-link="{name: 'friend'}" @click.prevent.stop="">
+      <a v-link.stop="{name: 'friend'}">
         <li>友链</li>
       </a>
-      <a v-link="{name: 'categories'}" @click.prevent.stop="">
+      <a v-link.stop="{name: 'categories'}">
         <li class="three">博文</li>
       </a>
-      <a v-link="{name: 'about'}" @click.prevent.stop="">
+      <a v-link.stop="{name: 'about'}">
         <li>关于</li>
       </a>
     </ul>
