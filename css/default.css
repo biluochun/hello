@@ -430,3 +430,35 @@ h1 {
 .main.categories .posts .block.post:hover .content {
   display: none;
 }
+
+.main.post h1 {
+  position: absolute;
+  top: 0;
+  left: 320px;
+  right: 320px;
+  text-align: center;
+  line-height: 50px;
+}
+
+.main.post .time {
+  text-align: center;
+  line-height: 50px;
+  font-size: 18px;
+  position: absolute;
+  top: 50px;
+}
+
+.main.post .line-break-des {
+  display: block;
+  height: 1px;
+  background-color: #555;
+  border: 1px solid #EFEFEF;
+  width: 100%;
+}
+
+.main.post .des {
+  padding: 10px;
+  background-color: #F9F9F9;
+  border: 1px solid #555;
+  margin-top: 100px;
+}
