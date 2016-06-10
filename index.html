@@ -22,7 +22,7 @@
       <!-- 头部 -->
 <header>
   <!-- 网站菜单 -->
-  <div class="menu" :class="{hover: hover.menu}" @click="hover.menu=!hover.menu" title="点击固定">
+  <div class="menu" :class="{hover: hover.menu}" @click="hover.menu=!hover.menu" :title="hover.menu?'点击取消固定':'点我固定'">
     <p>
       <span>{= lyrics[1] =}</span>
       <span class="delay">{= lyrics[2] =}</span>
