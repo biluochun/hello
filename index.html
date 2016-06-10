@@ -28,16 +28,16 @@
       <span class="delay">{= lyrics[2] =}</span>
     </p>
     <ul class="clearfix">
-      <a @click.stop="router.go({name: 'index'})">
+      <a @click.stop="$router.go({name: 'index'})">
         <li class="index">首页</li>
       </a>
-      <a @click.stop="router.go({name: 'friend'})">
+      <a @click.stop="$router.go({name: 'friend'})">
         <li>友链</li>
       </a>
-      <a @click.stop="router.go({name: 'categories'})">
+      <a @click.stop="$router.go({name: 'categories'})">
         <li class="three">博文</li>
       </a>
-      <a @click.stop="router.go({name: 'about'})">
+      <a @click.stop="$router.go({name: 'about'})">
         <li>关于</li>
       </a>
     </ul>
