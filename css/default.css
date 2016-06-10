@@ -402,13 +402,19 @@ h1 {
 }
 
 .main.categories .posts .block.post {
+  cursor: pointer;
   box-shadow: 0 0 1px #04a4cc;
   color: #04a4cc;
   font-size: 14px;
+  transition: all .4s ease-in-out;
 }
 
 .main.categories .posts .block.post .date {
   display: none;
+}
+
+.main.categories .posts .block.post:hover {
+  background-color: #007199;
 }
 
 .main.categories .posts .block.post:hover .date {
