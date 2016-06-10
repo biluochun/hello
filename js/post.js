@@ -8,7 +8,7 @@ define('js/post', ['require'], function(require){
 			};
 		},
 		route: {
-			canActivate: function(){
+			canActivate: function(transition){
 				var path = transition.to.query.url;
 				var that = this;
 				require(['text!'+decodeURI(path)], function(html){
