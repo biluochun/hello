@@ -39,7 +39,13 @@ require([
         var App = Vue.extend({
             data: function() {
                 return {
-                    lyrics: hetu.lyrics[rand]
+                    lyrics: hetu.lyrics[rand],
+                    hover: {
+                        menu: true,
+                        auther: false,
+                        other: false,
+                        chat: false
+                    }
                 };
             },
             ready: function() {
