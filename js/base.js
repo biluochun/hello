@@ -3,12 +3,18 @@ require([
     '//cdn.bootcss.com/vue-router/0.7.13/vue-router.js',
     'js/data/music.hetu',
     'text!./html/index.html',
+    'text!../html/about.html',
+    'text!../html/friend.html',
+    'text!../html/categories.html',
     'js/post'
 ], function(
     Vue,
     VueRouter,
     hetu,
     indexView,
+    aboutView,
+    friendView,
+    categoriesView,
     post
 ) {
     Vue.config.delimiters = ['{=', '=}'];
@@ -53,15 +59,21 @@ require([
             },
             '/about': {
                 name: 'about',
-                component: post
+                component: {
+                    template: aboutView
+                }
             },
             '/friend': {
                 name: 'friend',
-                component: post
+                component: {
+                    template: friendView
+                }
             },
             '/categories': {
                 name: 'categories',
-                component: post
+                component: {
+                    template: categoriesView
+                }
             }
         };
 

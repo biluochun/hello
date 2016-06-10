@@ -1,5 +1,5 @@
 .normal-transition {
-  transition: all .3s ease;
+  transition: all 1s ease;
   transform: scale(1);
   opacity: 1;
 }
