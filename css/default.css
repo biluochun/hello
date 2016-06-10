@@ -436,12 +436,12 @@ h1 {
   top: 0;
   left: 320px;
   right: 320px;
-  text-align: center;
+  text-align: left;
   line-height: 50px;
 }
 
 .main.post .time {
-  text-align: center;
+  text-align: left;
   line-height: 50px;
   font-size: 18px;
   left: 320px;
@@ -454,13 +454,12 @@ h1 {
   display: block;
   height: 1px;
   background-color: #555;
-  border: 1px solid #AAA;
+  box-shadow: 0 0 1px #AAA;
   width: 100%;
 }
 
 .main.post .des {
   padding: 10px;
-  background-color: #E8E8E8;
   margin-top: 100px;
   color: #888;
 }
