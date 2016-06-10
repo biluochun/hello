@@ -325,6 +325,12 @@ h1 {
   }
 }
 
+.main.about, .main.friend, .main.categories {
+  width: 500px;
+  height: 300px;
+  margin: auto;
+}
+
 .main.index p {
   color: #04a4cc;
 }
