@@ -22,28 +22,28 @@
       <!-- 头部 -->
 <header>
   <!-- 网站菜单 -->
-  <div class="menu" :class="{hover: hover.menu}" @click.stop.prevent="hover.menu=!hover.menu">
+  <div class="menu" :class="{hover: hover.menu}" @click="hover.menu=!hover.menu">
     <p>
       <span>{= lyrics[1] =}</span>
       <span class="delay">{= lyrics[2] =}</span>
     </p>
     <ul class="clearfix">
-      <a v-link="{name: 'index'}">
+      <a v-link="$event.stopPropagation()&&$event.preventDefault()&&{name: 'index'}">
         <li class="index">首页</li>
       </a>
-      <a v-link="{name: 'friend'}">
+      <a v-link="$event.stopPropagation()&&$event.preventDefault()&&{name: 'friend'}">
         <li>友链</li>
       </a>
-      <a v-link="{name: 'categories'}">
+      <a v-link="$event.stopPropagation()&&$event.preventDefault()&&{name: 'categories'}">
         <li class="three">博文</li>
       </a>
-      <a v-link="{name: 'about'}">
+      <a v-link="$event.stopPropagation()&&$event.preventDefault()&&{name: 'about'}">
         <li>关于</li>
       </a>
     </ul>
   </div>
   <!-- 作者信息、网站信息 -->
-  <div class="auther" :class="{hover: hover.auther}" @click.stop.prevent="hover.auther=!hover.auther">
+  <div class="auther" :class="{hover: hover.auther}" @click="hover.auther=!hover.auther">
     <p>
       <span>{= lyrics[3] =}</span>
       <span class="delay">{= lyrics[4] =}</span>
@@ -51,14 +51,14 @@
     <img src="./img/luo.png"/>
   </div>
   <!-- 暂时未填充内容、预留不知道干什么的一角 -->
-  <div class="other" :class="{hover: hover.other}" @click.stop.prevent="hover.other=!hover.other">
+  <div class="other" :class="{hover: hover.other}" @click="hover.other=!hover.other">
     <p>
       <span>{= lyrics[5] =}</span>
       <span class="delay">{= lyrics[6] =}</span>
     </p>
   </div>
   <!-- 暂时未填充内容、预留聊天室一角 -->
-  <div class="chat" :class="{hover: hover.chat}" @click.stop.prevent="hover.chat=!hover.chat">
+  <div class="chat" :class="{hover: hover.chat}" @click="hover.chat=!hover.chat">
     <p>
       <span>{= lyrics[7] =}</span>
       <span class="delay">{= lyrics[8] =}</span>
