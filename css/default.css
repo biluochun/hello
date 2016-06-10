@@ -325,7 +325,7 @@ h1 {
   }
 }
 
-.main.about, .main.friend, .main.categories {
+.main.about, .main.friend {
   width: 400px;
   height: 500px;
   margin: auto;
@@ -379,4 +379,32 @@ h1 {
 .main.index .section ul li:hover a {
   color: #83E9F5;
   text-decoration: none;
+}
+
+.main.categories h1 {
+  height: 100px;
+}
+
+.main.categories .posts .name {
+  float: left;
+  border-radius: 4px;
+  background-color: #04a4cc;
+  color: #FFF;
+  padding: 2px;
+}
+
+.main.categories .posts .post {
+  float: left;
+}
+
+.main.categories .posts .post .title {
+  border-radius: 4px;
+  box-shadow: 0 0 1px #04a4cc;
+  color: #04a4cc;
+}
+
+.main.categories .posts .post .date {
+  position: absolute;
+  margin-top: 20px;
+  background-color: #FFF;
 }

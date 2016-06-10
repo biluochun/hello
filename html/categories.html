@@ -1,8 +1,9 @@
 ---
 ---
 <div class="main categories" transition="normal">
+	<h1>博文目录</h1>
 	{% for posts in site.categories %}
-		<div class="posts">
+		<div class="posts clearfix">
 			<div class="name">{{posts[0]}}</div>
 			{% for post in posts[1] %}
 			<div class="post">
