@@ -20,4 +20,4 @@ permalink: /:categories/:title(date::year.:month.:day)
 # Build settings
 #markdown: kramdown
 
-excerpt_separator: </des>
+excerpt_separator: <i class="line-break-des"></i>

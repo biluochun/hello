@@ -51,7 +51,7 @@ fis.match('*.png', {
 // default media is `dev`
 fis.match('*', {
   useHash: false,
-  optimizer: null,
+  //optimizer: null,
   domain: '.',
   deploy: fis.plugin('local-deliver', {
     to: '../branches/gh-pages/'

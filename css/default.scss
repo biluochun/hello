@@ -1,10 +1,19 @@
 @import "./theme.scss";
 
 
+@import "./transition.scss";
 @import "./main.scss";
 @import "./loader.scss";
 
-.main{
+.main.about, .main.friend{
+  width: 400px;
+  height: 500px;
+  margin: auto;
+  p{
+    margin: 16px 0;
+  }
+}
+.main.index{
   p{
     color: $color-main;
   }
@@ -12,6 +21,7 @@
     text-align: center;
   }
   .section{
+    margin-top: 20px;
     position: relative;
     ul{
       li{
@@ -49,3 +59,101 @@
     }
   }
 }
+.main.categories{
+  h1{
+    height: 100px;
+    text-align: center;
+  }
+  .posts{
+    .block{
+      float: left;
+      border-radius: 4px;
+      padding: 2px 8px;
+      height: 20px;
+      line-height: 20px;
+      margin: 0 14px 10px 0;
+      &.title{
+        background-color: $color-main;
+        color: #FFF;
+        font-size: 18px;
+      }
+      &.post{
+        cursor: pointer;
+        box-shadow: 0 0 1px $color-main;
+        color: $color-main;
+        font-size: 14px;
+        transition: all .4s ease-in-out;
+        .date{
+          display: none;
+        }
+        &:hover{
+          color: #41c2e2;
+          border-radius: 0px;
+          background-color: #FFF;
+          .date{
+            display: block;
+          }
+          .content{
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+.main.post{
+  h1{
+    position: absolute;
+    top: 0;
+    left: 320px;
+    right: 320px;
+    text-align: left;
+    line-height: 50px;
+    margin: 0;
+  }
+  .time{
+    text-align: left;
+    line-height: 50px;
+    font-size: 18px;
+    left: 320px;
+    right: 320px;
+    position: absolute;
+    top: 50px;
+  }
+  .line-break-des{
+    display: block;
+    height: 1px;
+    background-color: #FFF;
+    box-shadow: 0 0 1px #AAA;
+    width: 100%;
+  }
+  .des{
+    padding: 10px;
+    margin-top: 100px;
+    color: #888;
+  }
+  .content{
+    margin-top: 20px;
+    overflow: auto;
+    position: absolute;
+    bottom: 0;
+    top: 140px;
+    color: #5D5D5D;
+    line-height: 26px;
+    font-size: 16px;
+    p{
+      margin: 8px;
+      text-indent: 2rem;
+    }
+  }
+}
+
+
+
+
+
+::-webkit-scrollbar {width: 6px;height:6px;}
+::-webkit-scrollbar-track-piece{background-color: #eee;margin: -2px;}
+::-webkit-scrollbar-thumb{background: #aaa;min-height: 150px;min-width: 150px;border-radius: 10px;}
+::-webkit-scrollbar-thumb:vertical:hover{background: #555555}
+::-webkit-scrollbar-thumb:horizontal:hover{background: #555555}

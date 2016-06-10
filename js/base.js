@@ -1,14 +1,20 @@
 require([
-    '//cdn.bootcss.com/vue/1.0.24/vue.js',
-    '//cdn.bootcss.com/vue-router/0.7.13/vue-router.js',
+    '//cdn.bootcss.com/vue/1.0.24/vue.min.js',
+    '//cdn.bootcss.com/vue-router/0.7.13/vue-router.min.js',
     './data/music.hetu.js',
     'text!../html/index.html',
+    'text!../html/about.html',
+    'text!../html/friend.html',
+    'text!../html/categories.html',
     './js/post.js'
 ], function(
     Vue,
     VueRouter,
     hetu,
     indexView,
+    aboutView,
+    friendView,
+    categoriesView,
     post
 ) {
     Vue.config.delimiters = ['{=', '=}'];
@@ -31,9 +37,15 @@ require([
             linkActiveClass: 'active'
         });
         var App = Vue.extend({
-            data: function (){
+            data: function() {
                 return {
-                    lyrics: hetu.lyrics[rand]
+                    lyrics: hetu.lyrics[rand],
+                    hover: {
+                        menu: true,
+                        auther: false,
+                        other: false,
+                        chat: false
+                    }
                 };
             },
             ready: function() {
@@ -48,12 +60,49 @@ require([
                 }
             },
             '/post': {
+                name: 'post',
                 component: post
+            },
+            '/about': {
+                name: 'about',
+                component: {
+                    template: aboutView
+                }
+            },
+            '/friend': {
+                name: 'friend',
+                component: {
+                    template: friendView
+                }
+            },
+            '/categories': {
+                name: 'categories',
+                component: {
+                    template: categoriesView
+                }
             }
         };
 
         router.map(routerMap);
         router.start(App, '#body');
-        router.go({name: 'index'});
+
+        var routerName = router._currentTransition.to.name;
+        var routerNumber = 0;
+        var routerIndex = 0;
+        for(var i in routerMap){
+            routerNumber++;
+        }
+        for(var i in routerMap){
+            if(routerMap[i].name === routerName){
+                break;
+            }else{
+                routerIndex++;
+                if(routerIndex === routerNumber){
+                    router.go({
+                        name: 'index'
+                    });
+                }
+            }
+        }
     }
 });

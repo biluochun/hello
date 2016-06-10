@@ -1,18 +1,22 @@
 define([], function(){
+	var temp = '';
 	return {
-		template: '<div id="post" v-html="html"></div>',
+		template: '<div class="main post" transition="normal" id="post" v-html="html"></div>',
 		data: function(){
 			return {
 				html: ''
 			};
 		},
 		route: {
-			activate: function(transition){
+			canActivate: function(transition){
 				var path = transition.to.query.url;
-				var that = this;
 				require(['text!'+decodeURI(path)], function(html){
-					that.html = html;
+					temp = html;
+					transition.next();
 				});
+			},
+			activate: function(transition){
+				this.html = temp;
 				transition.next();
 			}
 		}

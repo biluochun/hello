@@ -1,0 +1,13 @@
+.normal-transition{
+	transition: all .5s ease;
+	transform: scale(1);
+	opacity: 1;
+}
+.normal-enter{
+	transform: scale(0.1);
+	opacity: 0;
+}
+.normal-leave{
+	transform: scale(0.1);
+	opacity: 0;
+}

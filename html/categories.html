@@ -1,0 +1,16 @@
+---
+---
+<div class="main categories" transition="normal">
+	<h1>博文目录</h1>
+	{% for posts in site.categories %}
+		<div class="posts clearfix">
+			<div class="block title">{{posts[0]}}</div>
+			{% for post in posts[1] %}
+			<div class="block post" v-link="'/post?url={{post.url}}'">
+				<div class="date">{{post.date}}</div>
+				<div class="content">{{post.title}}</div>
+			</div>
+			{% endfor %}
+		</div>
+	{% endfor %}
+</div>
