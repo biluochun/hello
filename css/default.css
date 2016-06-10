@@ -386,43 +386,35 @@ h1 {
   text-align: center;
 }
 
-.main.categories .posts .name {
+.main.categories .posts .block {
   float: left;
   border-radius: 4px;
-  background-color: #04a4cc;
-  color: #FFF;
   padding: 2px 8px;
-  font-size: 18px;
   height: 20px;
   line-height: 20px;
-  margin-bottom: 20px;
+  margin: 0 14px 10px 0;
 }
 
-.main.categories .posts .post {
-  float: left;
+.main.categories .posts .block.title {
+  background-color: #04a4cc;
+  color: #FFF;
+  font-size: 18px;
 }
 
-.main.categories .posts .post .title {
-  border-radius: 4px;
+.main.categories .posts .block.post {
   box-shadow: 0 0 1px #04a4cc;
   color: #04a4cc;
   font-size: 14px;
-  padding: 2px 8px;
-  margin-left: 14px;
-  height: 20px;
-  line-height: 20px;
-  margin-bottom: 20px;
 }
 
-.main.categories .posts .post .date {
+.main.categories .posts .block.post .date {
   position: absolute;
   margin-top: 20px;
-  background-color: #FFF;
   font-size: 12px;
   opacity: 0;
   pointer-events: none;
 }
 
-.main.categories .posts .post:hover .date {
+.main.categories .posts .block.post:hover .date {
   opacity: 1;
 }

@@ -4,11 +4,11 @@
 	<h1>博文目录</h1>
 	{% for posts in site.categories %}
 		<div class="posts clearfix">
-			<div class="name">{{posts[0]}}</div>
+			<div class="block title">{{posts[0]}}</div>
 			{% for post in posts[1] %}
-			<div class="post">
+			<div class="block post" v-link="'/post?url={{post.url}}'">
 				<div class="date">{{post.date}}</div>
-				<div class="title" v-link="'/post?url={{post.url}}'">{{post.title}}</div>
+				{{post.title}}
 			</div>
 			{% endfor %}
 		</div>
