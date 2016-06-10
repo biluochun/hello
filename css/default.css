@@ -438,6 +438,7 @@ h1 {
   right: 320px;
   text-align: left;
   line-height: 50px;
+  margin: 0;
 }
 
 .main.post .time {
@@ -453,7 +454,7 @@ h1 {
 .main.post .line-break-des {
   display: block;
   height: 1px;
-  background-color: #555;
+  background-color: #FFF;
   box-shadow: 0 0 1px #AAA;
   width: 100%;
 }
@@ -462,4 +463,8 @@ h1 {
   padding: 10px;
   margin-top: 100px;
   color: #888;
+}
+
+.main.post .content {
+  margin-top: 20px;
 }
