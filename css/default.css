@@ -1,5 +1,5 @@
 .normal-transition {
-  transition: all 1s ease;
+  transition: all .5s ease;
   transform: scale(1);
   opacity: 1;
 }
@@ -69,6 +69,24 @@ body, html {
   left: 0;
   right: 0;
   bottom: 0;
+}
+
+#body .loader-div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background-color: #04a4cc;
+  box-shadow: 0 0 0 4px #04a4cc;
+  transition: all .1s ease;
+}
+
+#body .loader-div .half {
+  width: 50%;
+}
+
+#body .loader-div .all {
+  width: 100%;
 }
 
 #body > header {

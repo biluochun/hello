@@ -3,9 +3,9 @@ require([
     '//cdn.bootcss.com/vue-router/0.7.13/vue-router.js',
     'js/data/music.hetu',
     'text!./html/index.html',
-    'text!../html/about.html',
-    'text!../html/friend.html',
-    'text!../html/categories.html',
+    'text!./html/about.html',
+    'text!./html/friend.html',
+    'text!./html/categories.html',
     'js/post'
 ], function(
     Vue,
@@ -39,7 +39,8 @@ require([
         var App = Vue.extend({
             data: function() {
                 return {
-                    lyrics: hetu.lyrics[rand]
+                    lyrics: hetu.lyrics[rand],
+                    loader: 0
                 };
             },
             ready: function() {

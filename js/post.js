@@ -1,4 +1,5 @@
 define('js/post', ['require'], function(require){
+	var temp = '';
 	return {
 		template: '<div class="main post" transition="normal" id="post" v-html="html"></div>',
 		data: function(){
@@ -7,13 +8,18 @@ define('js/post', ['require'], function(require){
 			};
 		},
 		route: {
-			activate: function(transition){
+			canActivate: function(){
 				var path = transition.to.query.url;
 				var that = this;
 				require(['text!'+decodeURI(path)], function(html){
-					that.html = html;
+					temp = html;
+					transition.next();
+					this.$parent.loader = 5;
 				});
-				transition.next();
+			},
+			activate: function(transition){
+				this.html = temp;
+				this.$parent.loader = 10;
 			}
 		}
 	};
