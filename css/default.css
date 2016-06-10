@@ -444,6 +444,8 @@ h1 {
   text-align: center;
   line-height: 50px;
   font-size: 18px;
+  left: 320px;
+  right: 320px;
   position: absolute;
   top: 50px;
 }
@@ -452,13 +454,13 @@ h1 {
   display: block;
   height: 1px;
   background-color: #555;
-  border: 1px solid #EFEFEF;
+  border: 1px solid #AAA;
   width: 100%;
 }
 
 .main.post .des {
   padding: 10px;
-  background-color: #F9F9F9;
-  border: 1px solid #555;
+  background-color: #E8E8E8;
   margin-top: 100px;
+  color: #888;
 }
