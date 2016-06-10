@@ -383,6 +383,7 @@ h1 {
 
 .main.categories h1 {
   height: 100px;
+  text-align: center;
 }
 
 .main.categories .posts {
@@ -407,6 +408,8 @@ h1 {
   box-shadow: 0 0 1px #04a4cc;
   color: #04a4cc;
   font-size: 14px;
+  padding: 2px 8px;
+  margin-left: 14px;
 }
 
 .main.categories .posts .post .date {
