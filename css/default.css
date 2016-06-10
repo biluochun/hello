@@ -414,9 +414,9 @@ h1 {
 }
 
 .main.categories .posts .block.post:hover {
-  color: #FFF;
+  color: #41c2e2;
   border-radius: 0px;
-  background-color: #37d7ff;
+  background-color: #FFF;
 }
 
 .main.categories .posts .block.post:hover .date {
