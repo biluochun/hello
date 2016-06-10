@@ -16,7 +16,7 @@ src_url: "" # cdn url or your site url
 github_username:  biluochun
 
 timezone: "Asia/Shanghai"
-permalink: /:categories/:title(date::year.:month.:day)
+permalink: /:categories/:title-date::year.:month.:day
 # Build settings
 #markdown: kramdown
 
