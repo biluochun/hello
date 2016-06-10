@@ -2,8 +2,9 @@
 ---
 <div class="main categories" transition="normal">
 	{% for posts in site.categories %}
-		{% for post in posts %}
-			{{ post|jsonify }}
+	0000000000:{{posts[0]}}
+		{% for post in posts[1] %}
+			{{ post|jsonify }}--------
 		{% endfor %}
 	{% endfor %}
 </div>c
