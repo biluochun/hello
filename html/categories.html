@@ -1,6 +1,7 @@
 ---
 ---
 <div class="main categories" transition="normal">
+{{site.categories|jsonify}}
 	{% for posts in site.categories %}
 	{{ posts }}
 		{% for post in posts %}
@@ -8,4 +9,4 @@
 			id:{{ post.id }}
 		{% endfor %}
 	{% endfor %}
-</div>
+</div>c
