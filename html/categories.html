@@ -2,7 +2,7 @@
 ---
 <div class="main categories" transition="normal">
 	{% for posts in site.categories %}
-	{{ posts.name }}
+	{{ posts }}
 		{% for post in posts %}
 			url:{{ post.url }}</br>
 			id:{{ post.id }}
