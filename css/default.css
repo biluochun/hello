@@ -467,6 +467,10 @@ h1 {
 
 .main.post .content {
   margin-top: 20px;
+  overflow: auto;
+  position: absolute;
+  bottom: 0;
+  top: 140px;
 }
 
 .main.post .content p {
