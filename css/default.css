@@ -109,13 +109,13 @@ body, html {
   transition-delay: 1s;
 }
 
-#body > header > div:hover {
+#body > header > div:hover, #body > header > div.hover {
   opacity: .9;
   transform: rotate(0);
   border-radius: 30px;
 }
 
-#body > header > div:hover p span {
+#body > header > div:hover p span, #body > header > div.hover p span {
   opacity: 1;
 }
 
