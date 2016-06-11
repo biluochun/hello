@@ -81,7 +81,11 @@
     <script type="text/javascript" src="/js/base.js"></script>
     <div id="uyan_frame" class="uyan_frame min"></div>
     <div id="uyan_frame_control" class="uyan_frame min" @click="click">评论</div>
-    <script>var duoshuoQuery = {short_name:"imconfig"};</script>
-    <script src="http://static.duoshuo.com/embed.js"></script>
+    <script type="text/javascript">
+      var uyan_config = {
+        su: location.hash
+      };
+    </script>
+    <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2016535"></script>
   </body>
 </html>
