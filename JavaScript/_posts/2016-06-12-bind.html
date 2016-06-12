@@ -1,0 +1,27 @@
+---
+---
+<div class="des">bind来自EcmaScript 5，实现'currying'</div>
+<i class="line-break-des"></i>
+<h1>{{ page.title }}</h1>
+<div class="time">{{ page.date }}</div>
+<div class="content" style="background-color: #ebfcff;">
+	<p>既然提了EcmaScript那还是备注下地址好：http://www.ecmascript.org</p>
+	<p>贴上ES5：http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf</p>
+	<h3>19.2.3.2 Function.prototype.bind ( thisArg , ...args)</h3>
+	<p>一：绑定this：</p>
+	<pre>
+		栗子：
+		var object = {x: 1};
+		function add(val){
+			return this.x + val;
+		}
+		var objectAdd = add.bind(object);  //这里便是了~~~
+	</pre>
+	<p>二：currying(柯里化)：</p>
+	<pre>
+		栗子：
+		function fun(a, b, c){}
+		var fun_ab = fun.bind(undefined, 'value of a', 'value of b');
+		fun_ab('value of c');
+	</pre>
+</div>
