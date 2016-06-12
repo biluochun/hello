@@ -1,0 +1,19 @@
+---
+---
+<div class="des">monkey-patching(猴子派来的补丁，对内置对象扩展)。</div>
+<i class="line-break-des"></i>
+<h1>{{ page.title }}</h1>
+<div class="time">{{ page.date }}</div>
+<div class="content" style="background-color: #ebfcff;">
+<p>monkey(猴子)patching(补丁),JavaScript可以对原有方法进行扩展。</p>
+<pre>
+	栗子：
+	function trace(object, method){
+		var original = object[method];
+		object[method] = function(){
+			//做点什么
+			return original.apply(this, arguments);
+		};
+	}
+</pre>
+</div>
