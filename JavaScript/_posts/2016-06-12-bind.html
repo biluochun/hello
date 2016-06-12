@@ -10,32 +10,32 @@
 	<div class="doc">
 		<h3>19.2.3.2 Function.prototype.bind ( thisArg , ...args)</h3>
 		<h5>When the bind method is called with argument <i>thisArg</i> and zero or more <i>args</i>, it performs the following steps:</h5>
-		<p>1. Let <i>Target</i> be the <em>this</em> value.</p>
-		<p>2. If IsCallable(<i>Target</i>) is <em>false</em>, throw a <em>TypeError</em> exception.</p>
+		<p>1. Let <i>Target</i> be the <strong>this</strong> value.</p>
+		<p>2. If IsCallable(<i>Target</i>) is <strong>false</strong>, throw a <strong>TypeError</strong> exception.</p>
 		<p>3. Let <i>args</i> be a new (possibly empty) List consisting of all of the argument values provided after <i>thisArg</i> in order.</p>
 		<p>4. Let <i>F</i> be BoundFunctionCreate(<i>Target</i>, <i>thisArg</i>, <i>args</i>).</p>
 		<p>5. ReturnIfAbrupt(<i>F</i>).</p>
-		<p>6. Let <i>targetHasLength</i> be HasOwnProperty(<i>Target</i>, <em>"length"</em>).</p>
+		<p>6. Let <i>targetHasLength</i> be HasOwnProperty(<i>Target</i>, <strong>"length"</strong>).</p>
 		<p>7. ReturnIfAbrupt(<i>targetHasLength</i>).</p>
-		<p>8. If <i>targetHasLength</i> is <em>true</em>, then</p>
-		<p>&nbsp;&nbsp;&nbsp;&nbsp;a. Let <i>targetLen</i> be Get(<i>Target</i>, <em>"length"</em>).</p>
+		<p>8. If <i>targetHasLength</i> is <strong>true</strong>, then</p>
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;a. Let <i>targetLen</i> be Get(<i>Target</i>, <strong>"length"</strong>).</p>
 		<p>&nbsp;&nbsp;&nbsp;&nbsp;b. ReturnIfAbrupt(<i>targetLen</i>).</p>
 		<p>&nbsp;&nbsp;&nbsp;&nbsp;c. If Type(<i>targetLen</i>) is not Number, let <i>L</i> be 0.</p>
 		<p>&nbsp;&nbsp;&nbsp;&nbsp;d. Else,</p>
 		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i. Let <i>targetLen</i> be ToInteger(<i>targetLen</i>).</p>
 		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ii. Let <i>L</i> be the larger of 0 and the result of <i>targetLen</i> minus the number of elements of <i>args</i>.</p>
 		<p>9. Else let <i>L</i> be 0.</p>
-		<p>10. Let <i>status</i> be DefinePropertyOrThrow(<i>F</i>, <em>"length"</em>, PropertyDescriptor {[[Value]]: <i>L</i>, [[Writable]]:<em>false</em>, [[Enumerable]]: <em>false</em>, [[Configurable]]: <em>true</em>}).</p>
+		<p>10. Let <i>status</i> be DefinePropertyOrThrow(<i>F</i>, <strong>"length"</strong>, PropertyDescriptor {[[Value]]: <i>L</i>, [[Writable]]:<strong>false</strong>, [[Enumerable]]: <strong>false</strong>, [[Configurable]]: <strong>true</strong>}).</p>
 		<p>11. Assert: <i>status</i> is not an abrupt completion.</p>
 		<p>12. Let <i>targetName</i> be Get(<i>Target</i>, "name").</p>
 		<p>13. ReturnIfAbrupt(<i>targetName</i>).</p>
 		<p>14. If Type(<i>targetName</i>) is not String, let <i>targetName</i> be the empty string.</p>
-		<p>15. Perform SetFunctionName(<i>F</i>, <i>targetName</i>, <em>"bound"</em>).</p>
+		<p>15. Perform SetFunctionName(<i>F</i>, <i>targetName</i>, <strong>"bound"</strong>).</p>
 		<p>16. Return <i>F</i>.</p>
-		<p>The length property of the bind method is <em>1</em>.</p>
-		<p>NOTE 1 The thisArg value is passed without modification as the <em>this</em> value. This is a change from Edition 3, where an
-			<em>undefined</em> or <em>null</em> thisArg is replaced with the global object and ToObject is applied to all other values and that
-			result is passed as the <em>this</em> value. Even though the thisArg is passed without modification, non-strict functions
+		<p>The length property of the bind method is <strong>1</strong>.</p>
+		<p>NOTE 1 The thisArg value is passed without modification as the <strong>this</strong> value. This is a change from Edition 3, where an
+			<strong>undefined</strong> or <strong>null</strong> thisArg is replaced with the global object and ToObject is applied to all other values and that
+			result is passed as the <strong>this</strong> value. Even though the thisArg is passed without modification, non-strict functions
 		still perform these transformations upon entry to the function.</p>
 		<p>NOTE 2 If <i>func</i> is an arrow function or a bound function then the <i>thisArg</i> will be ignored by the function [[Call]] in step 5.</p>
 	</div>
