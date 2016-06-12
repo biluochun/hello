@@ -1,0 +1,58 @@
+---
+---
+<div class="des">bind来自EcmaScript 5，实现'currying'</div>
+<i class="line-break-des"></i>
+<h1>{{ page.title }}</h1>
+<div class="time">{{ page.date }}</div>
+<div class="content" style="background-color: #ebfcff;">
+	<p>既然提了EcmaScript那还是备注下地址好：http://www.ecmascript.org</p>
+	<p>先看原文(免得我理解不对，误导他人)：http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf</p>
+	<div class="doc">
+		<h4>19.2.3.2 Function.prototype.bind ( thisArg , ...args)</h4>
+		<h5>When the bind method is called with argument <i>thisArg</i> and zero or more <i>args</i>, it performs the following steps:</h5>
+		1. Let <i>Target</i> be the <em>this</em> value.
+		2. If IsCallable(<i>Target</i>) is <em>false</em>, throw a <em>TypeError</em> exception.
+		3. Let <i>args</i> be a new (possibly empty) List consisting of all of the argument values provided after <i>thisArg</i> in
+		order.
+		4. Let <i>F</i> be BoundFunctionCreate(<i>Target</i>, <i>thisArg</i>, <i>args</i>).
+		5. ReturnIfAbrupt(<i>F</i>).
+		6. Let <i>targetHasLength</i> be HasOwnProperty(<i>Target</i>, <em>"length"</em>).
+		7. ReturnIfAbrupt(<i>targetHasLength</i>).
+		8. If <i>targetHasLength</i> is <em>true</em>, then
+		&nbsp;&nbsp;&nbsp;&nbsp;a. Let <i>targetLen</i> be Get(<i>Target</i>, <em>"length"</em>).
+		&nbsp;&nbsp;&nbsp;&nbsp;b. ReturnIfAbrupt(<i>targetLen</i>).
+		&nbsp;&nbsp;&nbsp;&nbsp;c. If Type(<i>targetLen</i>) is not Number, let <i>L</i> be 0.
+		&nbsp;&nbsp;&nbsp;&nbsp;d. Else,
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i. Let <i>targetLen</i> be ToInteger(<i>targetLen</i>).
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ii. Let <i>L</i> be the larger of 0 and the result of <i>targetLen</i> minus the number of elements of <i>args</i>.
+		9. Else let <i>L</i> be 0.
+		10. Let <i>status</i> be DefinePropertyOrThrow(<i>F</i>, <em>"length"</em>, PropertyDescriptor {[[Value]]: <i>L</i>, [[Writable]]:
+		<em>false</em>, [[Enumerable]]: <em>false</em>, [[Configurable]]: <em>true</em>}).
+		11. Assert: <i>status</i> is not an abrupt completion.
+		12. Let <i>targetName</i> be Get(<i>Target</i>, "name").
+		13. ReturnIfAbrupt(<i>targetName</i>).
+		14. If Type(<i>targetName</i>) is not String, let <i>targetName</i> be the empty string.
+		15. Perform SetFunctionName(<i>F</i>, <i>targetName</i>, <em>"bound"</em>).
+		16. Return <i>F</i>.
+		The length property of the bind method is <em>1</em>.
+		NOTE 1 The thisArg value is passed without modification as the <em>this</em> value. This is a change from Edition 3, where an
+		<em>undefined</em> or <em>null</em> thisArg is replaced with the global object and ToObject is applied to all other values and that
+		result is passed as the <em>this</em> value. Even though the thisArg is passed without modification, non-strict functions
+		still perform these transformations upon entry to the function.
+		NOTE 2 If <i>func</i> is an arrow function or a bound function then the <i>thisArg</i> will be ignored by the function [[Call]] in step 5.
+	</div>
+	<p>bind(绑定).那么~~~绑定什么呢？</p>
+	<p>一：绑定this：</p>
+	<pre>
+		栗子：
+		var object = {x: 1};
+		function add(val){
+		return this.x + val;
+		}
+		var objectAdd = add.bind(object);  //这里便是了~~~
+	</pre>
+	<p>二：currying(柯里化)：</p>
+	<pre>
+		栗子：
+	</pre>
+</div>
