@@ -52,6 +52,25 @@ require([
                 setTimeout(closeLoader, 1);
             }
         });
+        new Vue({
+            el: '#uyan_frame_control',
+            data: {
+                bool: false
+            },
+            methods: {
+                click: (function(){
+                    var uyan = document.getElementById('uyan_frame');
+                    return function(){
+                        var that = this;
+                        //uyan_config.su = location.hash;
+                        require(['http://v2.uyan.cc/code/uyan.js?uid=2016535'], function(){
+                            that.bool = !that.bool;
+                            uyan.className = that.bool?'show':'';
+                        });
+                    };
+                })()
+            }
+        });
         var routerMap = {
             '/': {
                 name: 'index',

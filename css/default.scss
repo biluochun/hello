@@ -1,4 +1,5 @@
 @import "./theme.scss";
+@import "./alifont.scss";
 
 
 @import "./transition.scss";
@@ -153,7 +154,52 @@
 
 
 ::-webkit-scrollbar {width: 6px;height:6px;}
-::-webkit-scrollbar-track-piece{background-color: #eee;margin: -2px;}
-::-webkit-scrollbar-thumb{background: #aaa;min-height: 150px;min-width: 150px;border-radius: 10px;}
-::-webkit-scrollbar-thumb:vertical:hover{background: #555555}
-::-webkit-scrollbar-thumb:horizontal:hover{background: #555555}
+::-webkit-scrollbar-track-piece{background-color: $color-main + #333;}
+::-webkit-scrollbar-thumb{background-color: $color-main - #111;min-height: 150px;min-width: 150px;}
+::-webkit-scrollbar-thumb:vertical:hover{background-color: $color-main - #222;}
+::-webkit-scrollbar-thumb:horizontal:hover{background-color: $color-main - #333;}
+
+#uyan_frame{
+  z-index: $zIndex-uyan_frame;
+  transition: all 1s ease;
+  position: absolute;
+  background-color: #f2fcff;
+  top: 200px;
+  left: 200px;
+  right: 200px;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 0 3px #43a3bb;
+  bottom: 108px;
+  overflow: auto;
+  opacity: 0;
+  pointer-events: none;
+  &.show{
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+#uyan_frame_control{
+  z-index: $zIndex-uyan_frame + 1;
+  transition: all .3s ease;
+  cursor: pointer;
+  box-shadow: 0 0 4px $color-main;
+  left: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  border: 4px solid #FFF;
+  overflow: hidden;
+  bottom: 108px;
+  position: absolute;
+  line-height: 40px;
+  text-align: center;
+  color: #FFF;
+  font-size: 16px;
+  background-color: $color-main;
+  &:hover{
+    background-color: #5bcfec;
+    transform: scale(1.2);
+  }
+}

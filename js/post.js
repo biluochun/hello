@@ -1,7 +1,7 @@
 define([], function(){
 	var temp = '';
 	return {
-		template: '<div class="main post" transition="normal" id="post" v-html="html"></div>',
+		template: '<div class="main post" transition="normal" id="post">{{{html}}}</div>',
 		data: function(){
 			return {
 				html: ''

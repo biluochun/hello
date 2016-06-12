@@ -52,7 +52,7 @@ fis.match('*.png', {
 fis.match('*', {
   useHash: false,
   //optimizer: null,
-  domain: '.',
+  domain: '',
   deploy: fis.plugin('local-deliver', {
     to: '../branches/gh-pages/'
   })
