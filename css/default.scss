@@ -180,7 +180,7 @@
   }
 }
 
-#uyan_frame_control{
+#uyan_frame_control, #imconfig_manager_control{
   z-index: $zIndex-uyan_frame + 1;
   transition: all .3s ease;
   cursor: pointer;
@@ -202,4 +202,19 @@
     background-color: #5bcfec;
     transform: scale(1.2);
   }
+}
+#imconfig_manager_control{
+  bottom: 168px;
+}
+#imconfig_container{
+  min-width: 400px;
+  min-height: 300px;
+  width: 60%;
+  height: 60%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
 }

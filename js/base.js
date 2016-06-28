@@ -58,14 +58,36 @@ require([
                 bool: false
             },
             methods: {
-                click: (function(){
+                click: (function() {
                     var uyan = document.getElementById('uyan_frame');
-                    return function(){
+                    return function(type) {
                         var that = this;
                         //uyan_config.su = location.hash;
-                        require(['http://v2.uyan.cc/code/uyan.js?uid=2016535'], function(){
+                        require(['http://v2.uyan.cc/code/uyan.js?uid=2016535'], function() {
                             that.bool = !that.bool;
-                            uyan.className = that.bool?'show':'';
+                            uyan.className = that.bool ? 'show' : '';
+                        });
+                    };
+                })()
+            }
+        });
+        new Vue({
+            el: '#imconfig_manager_control',
+            data: {
+                im: false
+            },
+            methods: {
+                click: (function() {
+                    return function(type) {
+                        var that = this;
+                        require(['//qiniu.imconfig.com/im.js'], function(imconfig) {
+                            if (this.im && this.im.is_imconfig === true) {
+                                im.logout();
+                            } else {
+                                this.im = new imconfig({
+                                    id: 'imconfig_container'
+                                });
+                            }
                         });
                     };
                 })()
@@ -108,15 +130,15 @@ require([
         var routerName = router._currentTransition.to.name;
         var routerNumber = 0;
         var routerIndex = 0;
-        for(var i in routerMap){
+        for (var i in routerMap) {
             routerNumber++;
         }
-        for(var i in routerMap){
-            if(routerMap[i].name === routerName){
+        for (var i in routerMap) {
+            if (routerMap[i].name === routerName) {
                 break;
-            }else{
+            } else {
                 routerIndex++;
-                if(routerIndex === routerNumber){
+                if (routerIndex === routerNumber) {
                     router.go({
                         name: 'index'
                     });
