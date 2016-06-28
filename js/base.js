@@ -80,7 +80,7 @@ require([
                 click: (function() {
                     return function(type) {
                         var that = this;
-                        require(['//qiniu.imconfig.com/im.js'], function(imconfig) {
+                        require(['//chatconfig.oss-cn-shanghai.aliyuncs.com/src/js/index.js'], function(imconfig) {
                             if (this.im && this.im.is_imconfig === true) {
                                 im.logout();
                             } else {
